@@ -1,7 +1,6 @@
 package com.company;
 
 import java.util.Scanner;
-
 public class email {
 
     private String firstName;
@@ -23,21 +22,34 @@ public class email {
     //ask for the department from the user
 
     private String setDepartment() {
-        System.out.print("\nThank you for using our email generator application! \nTo begin, please enter the number of the department that you are currently working in: \n\n1. Sales \n2. Development \n3. Accounting \n0. None/not applicable ");
+        System.out.print("\nThank you for using our email generator application! \nTo begin, please enter the number of the department that you are currently working in: \n\n1. Sales \n2. Development \n3. Accounting \n0. None/not applicable \n");
+        //System.out.println("-----------------------------------");
 
         Scanner in = new Scanner(System.in);
         int deptChoice = in.nextInt();
 
         if (deptChoice == 1) {
+            System.out.println("\nYou chose the sales department, thank you!");
             return "sales";
+
         } else if (deptChoice == 2) {
+            System.out.println("\nYou chose the development department, thank you!");
             return "development";
+
         } else if (deptChoice == 3) {
+            System.out.println("\nYou chose the accounting department, thank you!");
             return "accounting";
+
         } else {
+            System.out.println("\nYou currently do not belong to any specific department, thank you!");
             return "";
         }
-    }
+
+        //can we validate this?
+
+
+        }
+
 
     //generate a random password
 
