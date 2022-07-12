@@ -1,6 +1,9 @@
 package com.company;
 
 import java.util.Scanner;
+
+import static java.lang.Math.random;
+
 public class email {
 
     private String firstName;
@@ -17,6 +20,8 @@ public class email {
         this.lastName = lastName;
         this.department = setDepartment();
         // constructor check: System.out.println("\nEMAIL CREATED: " + this.firstName + " " + this.lastName);
+
+        //call method that returns a random password--not sure why this is inside the constructor though?
     }
 
     //ask for the department from the user
@@ -29,15 +34,15 @@ public class email {
         int deptChoice = in.nextInt();
 
         if (deptChoice == 1) {
-            System.out.println("\nYou chose the Sales department, thank you!");
+            System.out.println("\nYou chose the Sales Department, thank you!");
             return "sales";
 
         } else if (deptChoice == 2) {
-            System.out.println("\nYou chose the Development department, thank you!");
+            System.out.println("\nYou chose the Development Department, thank you!");
             return "development";
 
         } else if (deptChoice == 3) {
-            System.out.println("\nYou chose the Accounting department, thank you!");
+            System.out.println("\nYou chose the Accounting Department, thank you!");
             return "accounting";
 
         } else {
@@ -51,7 +56,18 @@ public class email {
         }
 
 
-    //generate a random password
+    //generate a random password = Memorize this.  Why not? Or, just do it every day for a week :-)
+
+    private String randomPassword(int length) {
+        String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*!$";
+        char [] password = new char[length];
+
+        for(int i = 0; i < length; i++) {
+            int rand = (int) (Math.random() * passwordSet.length());
+            password[i] = passwordSet.charAt(rand);
+        }
+    return new String(password);
+    }
 
     //set alternate email address
 
