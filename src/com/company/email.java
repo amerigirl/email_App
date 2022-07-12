@@ -29,19 +29,19 @@ public class email {
         int deptChoice = in.nextInt();
 
         if (deptChoice == 1) {
-            System.out.println("\nYou chose the sales department, thank you!");
+            System.out.println("\nYou chose the Sales department, thank you!");
             return "sales";
 
         } else if (deptChoice == 2) {
-            System.out.println("\nYou chose the development department, thank you!");
+            System.out.println("\nYou chose the Development department, thank you!");
             return "development";
 
         } else if (deptChoice == 3) {
-            System.out.println("\nYou chose the accounting department, thank you!");
+            System.out.println("\nYou chose the Accounting department, thank you!");
             return "accounting";
 
         } else {
-            System.out.println("\nYou currently do not belong to any specific department, thank you!");
+            System.out.println("\nYou currently do not belong to any specific department, let's continue. ");
             return "";
         }
 
