@@ -11,6 +11,7 @@ public class email {
     private String password;
     private String department;
     private String alternateEmailAddress;
+    private int defaultPasswordLength = 8; //this is where you define the default password, not in the method!
     private int mailBoxCapacity;
 
 
@@ -21,7 +22,9 @@ public class email {
         this.department = setDepartment();
         // constructor check: System.out.println("\nEMAIL CREATED: " + this.firstName + " " + this.lastName);
 
-        //call method that returns a random password--not sure why this is inside the constructor though?
+        //call method that returns a random password
+        this.password = randomPassword(defaultPasswordLength);
+        System.out.println("Your password is " + this.password);
     }
 
     //ask for the department from the user
