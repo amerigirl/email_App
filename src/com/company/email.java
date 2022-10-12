@@ -21,10 +21,9 @@ public class email {
     public email(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-
         //System.out.println("\nEMAIL CREATED: " + this.firstName + " " + this.lastName);
 
-    //call method that asks for the department - return department
+        //call method that asks for the department - return department
         this.department = setDepartment();
         System.out.println("Department: " + this.department);
 
@@ -70,15 +69,15 @@ private String setDepartment() {
         //can we validate this?
         }
 
-//    //generate a random password = Memorize this.  Why not? Or, just do it every day for a week :-)
+       //generate a random password = Memorize this.  Why not? Or, just do it every day for a week :-)
 
     private String randomPassword(int length) {
         String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789*!$";
         char [] password = new char[length];
 
         for(int i = 0; i < length; i++) {
-            int rand = (int) (Math.random() * passwordSet.length());
-            password[i] = passwordSet.charAt(rand);
+            int randomPassword = (int) (Math.random() * passwordSet.length());
+            password[i] = passwordSet.charAt(randomPassword);
         }
     return new String(password);
     }
